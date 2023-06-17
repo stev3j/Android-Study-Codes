@@ -1,11 +1,8 @@
-package com.example.androidstudycodes
+package com.example.androidstudycodes.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.viewModels
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.Observer
 import com.example.androidstudycodes.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
