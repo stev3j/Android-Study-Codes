@@ -29,7 +29,7 @@ fun LoginDto.toModel(): LoginRequest = LoginRequest(
 //)
 
 fun TokenDto.toModel(): TokenRequest = TokenRequest(
-    authCode = this.authCode
+    accessToken = this.accessToken
 )
 
 fun TokenResponse.toEntity(): Token = Token(

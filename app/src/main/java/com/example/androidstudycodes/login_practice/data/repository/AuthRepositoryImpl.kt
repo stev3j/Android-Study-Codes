@@ -18,16 +18,8 @@ class AuthRepositoryImpl @Inject constructor(
     private val authApi: AuthApi
 ) : AuthRepository {
 
-//    override suspend fun login(loginDto: LoginDto): Login =
-//        authApi.login(loginDto.toModel()).data.toEntity()
-
-    override suspend fun login(loginDto: LoginDto): Login {
-        val response = authApi.login(loginDto.toModel())
-        Log.d("error2", response.toString())
-        return response.data.toEntity()
-        //return authApi.login(loginDto.toModel()).data.toEntity()
-    }
-
+    override suspend fun login(loginDto: LoginDto): Login =
+        authApi.login(loginDto.toModel()).data.toEntity()
 
     override suspend fun refreshToken(): RefreshToken =
         authApi.refreshToken().data.toEntity()
