@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navTestOneFragment">
+
+    <fragment
+        android:id="@+id/navTestOneFragment"
+        android:name="com.example.androidstudycodes.navigation_test.NavTestOneFragment"
+        android:label="fragment_nav_test_one"
+        tools:layout="@layout/fragment_nav_test_one" >
+        <action
+            android:id="@+id/action_navTestOneFragment_to_navTestTwoFragment"
+            app:destination="@id/navTestTwoFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/navTestTwoFragment"
+        android:name="com.example.androidstudycodes.navigation_test.NavTestTwoFragment"
+        android:label="fragment_nav_test_two"
+        tools:layout="@layout/fragment_nav_test_two" >
+        <argument
+            android:name="custom_object"
+            app:argType="com.example.androidstudycodes.navigation_test.CustomObject" />
+    </fragment>
+</navigation>

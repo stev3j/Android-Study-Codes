@@ -24,7 +24,7 @@ class AuthActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        viewModel = ViewModelProvider(this).get(AuthViewModel::class.java)
+        viewModel = ViewModelProvider(this)[AuthViewModel::class.java]
 
         if (App.prefs.accessToken.isEmpty().not()) {
             startActivity(Intent(AuthActivity(), AuthSuccessActivity::class.java))

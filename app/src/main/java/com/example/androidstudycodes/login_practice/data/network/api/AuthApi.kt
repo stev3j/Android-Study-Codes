@@ -11,7 +11,7 @@ import retrofit2.http.GET
 import retrofit2.http.POST
 
 // 서버 통신
-// 왜 인터페이스?
+// 왜 인터페이스? -> 레트로핏이 구현체를 만들어주기 때문
 interface AuthApi {
 
     @POST("login")
