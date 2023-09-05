@@ -3,30 +3,25 @@ package com.example.androidstudycodes.login_practice.di
 import com.example.androidstudycodes.login_practice.data.network.api.AuthApi
 import com.example.androidstudycodes.login_practice.utils.App
 import com.example.androidstudycodes.login_practice.utils.BASE_URL
-import dagger.Module
-import dagger.Provides
-import dagger.hilt.InstallIn
-import dagger.hilt.components.SingletonComponent
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
-import javax.inject.Singleton
 
-@Module
-@InstallIn(SingletonComponent::class)
+//@Module
+//@InstallIn(SingletonComponent::class)
 object NetworkModule {
 
     /* Retrofit Instance */
-    @Provides
-    @Singleton
+//    @Provides
+//    @Singleton
     fun provideAuthApi(retrofit: Retrofit): AuthApi =
         retrofit.create(AuthApi::class.java)
 
-    @Provides
-    @Singleton
+//    @Provides
+//    @Singleton
     fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
         return Retrofit.Builder()
             .baseUrl(BASE_URL)
@@ -36,8 +31,8 @@ object NetworkModule {
     }
 
     /* Interceptor */
-    @Singleton
-    @Provides
+//    @Singleton
+//    @Provides
     fun provideOkHttpClient(
         headerInterceptor: Interceptor,
         LoggerInterceptor: HttpLoggingInterceptor,
@@ -52,8 +47,8 @@ object NetworkModule {
         return okHttpClientBuilder.build()
     }
 
-    @Provides
-    @Singleton
+//    @Provides
+//    @Singleton
     fun provideHeaderInterceptor() = Interceptor { chain ->
         with(chain) {
             val newRequest = request().newBuilder()
@@ -63,8 +58,8 @@ object NetworkModule {
         }
     }
 
-    @Provides
-    @Singleton
+//    @Provides
+//    @Singleton
     fun provideLoggingInterceptor(): HttpLoggingInterceptor =
         HttpLoggingInterceptor().apply { level = HttpLoggingInterceptor.Level.BODY }
 

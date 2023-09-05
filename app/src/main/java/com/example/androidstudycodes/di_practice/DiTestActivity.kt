@@ -5,15 +5,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import com.example.androidstudycodes.R
-import dagger.hilt.android.AndroidEntryPoint
-import javax.inject.Inject
 
-@AndroidEntryPoint
+//@AndroidEntryPoint
 class DiTestActivity : AppCompatActivity() {
 
     private val TAG = "DI Test"
 
-    @Inject
+//    @Inject
     lateinit var testString: String
 
 

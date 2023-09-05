@@ -10,11 +10,11 @@ import com.example.androidstudycodes.login_practice.domain.model.RefreshToken
 import com.example.androidstudycodes.login_practice.domain.model.Token
 import com.example.androidstudycodes.login_practice.domain.model.TokenDto
 import com.example.androidstudycodes.login_practice.domain.repository.AuthRepository
-import javax.inject.Inject
+//import javax.inject.Inject
 
 // 필요한 함수들 + 서버에서 받아온 값을 가공
 
-class AuthRepositoryImpl @Inject constructor(
+class AuthRepositoryImpl constructor(
     private val authApi: AuthApi
 ) : AuthRepository {
 

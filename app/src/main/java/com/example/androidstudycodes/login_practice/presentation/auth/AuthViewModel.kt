@@ -10,14 +10,11 @@ import com.example.androidstudycodes.login_practice.domain.repository.AuthReposi
 import com.example.androidstudycodes.login_practice.utils.App
 import com.example.androidstudycodes.login_practice.utils.MutableEventFlow
 import com.example.androidstudycodes.login_practice.utils.asEventFlow
-import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import java.security.MessageDigest
-import javax.inject.Inject
 
-@HiltViewModel
-class AuthViewModel @Inject constructor(
+//@HiltViewModel
+class AuthViewModel constructor(
     private val authRepository: AuthRepository
 ): ViewModel() {
 

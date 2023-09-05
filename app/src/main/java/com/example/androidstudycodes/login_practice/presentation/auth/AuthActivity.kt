@@ -12,9 +12,9 @@ import com.example.androidstudycodes.login_practice.domain.model.LoginDto
 import com.example.androidstudycodes.login_practice.domain.model.TokenDto
 import com.example.androidstudycodes.login_practice.utils.App
 import com.example.androidstudycodes.login_practice.utils.repeatOnStarted
-import dagger.hilt.android.AndroidEntryPoint
+//import dagger.hilt.android.AndroidEntryPoint
 
-@AndroidEntryPoint
+//@AndroidEntryPoint
 class AuthActivity : AppCompatActivity() {
 
     private val binding : ActivityAuthBinding by lazy { ActivityAuthBinding.inflate(layoutInflater) }
