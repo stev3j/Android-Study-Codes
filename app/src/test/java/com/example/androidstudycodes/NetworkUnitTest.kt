@@ -12,9 +12,6 @@ import com.example.androidstudycodes.login_practice.domain.repository.AuthReposi
 import com.example.androidstudycodes.login_practice.presentation.auth.AuthViewModel
 import com.example.androidstudycodes.login_practice.utils.App
 import com.example.androidstudycodes.login_practice.utils.BASE_URL
-import dagger.Provides
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import okhttp3.Interceptor
@@ -25,8 +22,6 @@ import org.junit.Test
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
-import javax.inject.Inject
-import javax.inject.Singleton
 
 class NetworkUnitTest() {
 
